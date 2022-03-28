@@ -16,5 +16,10 @@ public class BinarySearchTree<E> {
 		setRight(right);
 	}
 	
-	
+	public void setLeft(BinaryTree<E> newLeft) {
+		if(isEmpty()) return;
+		if(left!= null && left.parent() == this) left.setParent(null);
+		left = newLeft;
+		left.setParent(this);
+	}
 }
