@@ -1,40 +1,34 @@
 
 public class ComparableAssociation<K, V> {
-	String spanish;
-	String english;
-	String french;
+	protected Object key;
+	protected Object val;
 	
-	public String getSpanish() {
-		return spanish;
+	public ComparableAssociation(key,val) {
+		key1 = key;
+		val1 = value;
 	}
 	
-	public void setSpanish(String spanish) {
-		this.spanish = spanish;
+	public Object getVal() {
+		return val1;
 	}
 	
-	public String getEnglish() {
-		return english;
+	public Object setVal(Object val) {
+		val = val1;
+		return val;
+	}
+	
+	public Object getKey() {
+		return key1;
+	}
+	
+	public Object setKey(Object key) {
+		key = key1;
+		return key;
 		
 	}
 	
-	public void setEnglish() {
-		this.english = english;
+	public int compareTo(Object o) {
+		return 0;
 	}
 	
-	public String getFrench() {
-		return french;
-	}
-	
-	public void  setFrench() {
-		this.french = french;
-	}
-	
-	
-	public String toString1() {
-		return getEnglish();
-	}
-
-	public String toString2() {
-		return getFrench();
-	}
 }

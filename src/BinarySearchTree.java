@@ -22,4 +22,24 @@ public class BinarySearchTree<E> {
 		left = newLeft;
 		left.setParent(this);
 	}
+	
+    public BinaryTree<E> left()
+    {
+        return left;
+    }
+	
+    protected void setParent(BinaryTree<E> newParent)
+    {
+        if (!isEmpty()) {
+            parent = newParent;
+        }
+    }
+    
+    public void setRight(BinaryTree<E> newRight)
+    {
+        if (isEmpty()) return;
+        if (right != null && right.parent == this) right.setParent(null);//si no esta vacio lo re ingresa
+        right = newRight;
+        right.setParent(this);
+    }
 }
